@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Ingreso.Sorting
 {
@@ -13,8 +14,26 @@ namespace Ingreso.Sorting
          */
         public static List<Jugador> OrdenarPorPuntuacionYNombre(List<Jugador> jugadores)
         {
-            //TODO: resolver
-            throw new NotImplementedException();
+            // Verificaciones de ahorro... nunca están de más :)
+            if (jugadores == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            if (jugadores.Count == 0)
+            {
+                return new List<Jugador>();
+            }
+
+            if (jugadores.Count == 1)
+            {
+                return jugadores;
+            }
+
+            // Ordenamiento
+            return jugadores.OrderByDescending(x => x.Puntuacion)
+                            .ThenBy(x => x.Nombre)
+                            .ToList();
         }
 
         /**
@@ -26,8 +45,27 @@ namespace Ingreso.Sorting
          */
         public static List<Jugador> OrdenarPorPuntuacionPerdidasYNombre(List<Jugador> jugadores)
         {
-            //TODO: resolver
-            throw new NotImplementedException();
+            // Verificaciones de ahorro... nunca están de más :)
+            if (jugadores == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            if (jugadores.Count == 0)
+            {
+                return new List<Jugador>();
+            }
+
+            if (jugadores.Count == 1)
+            {
+                return jugadores;
+            }
+
+            // Ordenamiento
+            return jugadores.OrderByDescending(x => x.Puntuacion)
+                        .ThenBy(x => x.Perdidas)
+                        .ThenBy(x => x.Nombre)
+                        .ToList();
         }
     }
 }
