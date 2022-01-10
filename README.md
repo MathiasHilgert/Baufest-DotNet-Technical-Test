@@ -1,74 +1,68 @@
-# Examen de nivelación de Baufest
-## Consideraciones generales
-- Para resolver los ejercicios en general alcanza con implementar un métodos. De todas maneras, está permitido agregar métodos, clases, interfaces o lo que consideres necesario
-- Para verificar la implementación se pueden ejecutar los test correspondientes a cada ejercicio. Los tests se encuentran en el namespace correspondiente al ejercicio dentro del proyecto <code>ingresoTest</code>
+# 🚀 Baufest technical test for .NET developers
 
-## Ejercicio 1: Sorting
+## 📖 Table of Contents
 
-Para realizar este ejercicio se debe modificar el archivo sorting.cs de la carpeta ingreso/sorting.
+- [🚀 Baufest technical test for .NET developers](#-baufest-technical-test-for-net-developers)
+  - [📖 Table of Contents](#-table-of-contents)
+  - [⚠️ Disclaimer](#️-disclaimer)
+  - [🗒️ About this solution](#️-about-this-solution)
+  - [☠️ About the challenge exercises](#️-about-the-challenge-exercises)
+    - [✨ The answers](#-the-answers)
+    - [Exercise #1: Sorting](#exercise-1-sorting)
+    - [Exercise #2: Repeated characters](#exercise-2-repeated-characters)
+    - [Exercise #3: Alphabet Soup](#exercise-3-alphabet-soup)
 
-a.	Implementar el método `OrdenarPorPuntuacionYNombre`, para ordenar los jugadores en una lista. Se debe ordenar primero por puntuación de manera descendente, luego por nombre de manera ascendente.  
-b.	Implementar el método `OrdenarPorPuntuacionPerdidasYNombre`, similar al del punto a) pero que tenga en cuenta las pérdidas de un jugador. Cuando 2 jugadores tienen igual cantidad de puntos, el que tiene menos perdidas se lo considerara el mayor. Luego a igual puntos y perdidas se seguirá usando el nombre de manera ascendente.  
+## ⚠️ Disclaimer
 
-## Ejercicio 2: Caracteres repetidos
-Para realizar este ejercicio se debe modificar el archivo repeatedCharacters.cs de la carpeta ingreso/strings.
+**Okay, let's go... 🚀✨💥**
 
-El metodo debe retornar un booleano indicando si el parametro `cadena` cumple con alguna de las siguientes propiedades:
+This technical evaluation has been done **just for fun** (Yep, as simple as that).
+If you want to know more about Baufest, this is [their website](https://baufest.com/en)... They have interesting projects! 
 
-1- Todos los caracteres aparecen la misma cantidad de veces.<br>
+The documentation of the exercises is in spanish, since it was the language requested for the evaluation (perhaps you should translate it into English).
 
-    Ejemplos: "aabbcc", "abcdef", "aaaaaa"
-     
-2- Todos los caracteres aparecen la misma cantidad de veces, a excepcion de 1, que aparece un vez mas o una vez menos.
-     
-    Ejemplos: "aabbccc", "aabbc", "aaaaccccc"
+## 🗒️ About this solution
 
-## Ejercicio 3: Alphabet Soup
+In this repository, you will find my proposed solution for the Baufest entry challenge for the role of .NET Framework developer. I have seen this technical evaluation during a weekend and I have found it interesting to solve it, **just for fun** and so you can serve as a reference for other developers.
 
-Para realizar este ejercicio se debe modificar el archivo wordSearcher.cs de la carpeta ingreso/alphabetSoup.
+**If you find a better implementation, feel free to generate a pull-request 😉.**
 
-### Objetivo
+## ☠️ About the challenge exercises
 
-El objetivo de este ejercicio es implementar una función que determine si una palabra está en una sopa de letras.
+The technical evaluation includes three basic exercises, each one with its respective complexity and originally described in the [instructions file](consignas.md) provided by Baufest.
 
-### Reglas
-- Las palabras pueden estar dispuestas direcciones horizontal o vertical, _no_ en diagonal.
-- Las palabras pueden estar orientadas en cualquier sentido, esto es, de derecha a izquierda o viceversa, y de arriba
-para abajo o viceversa.
-- El cambio de dirección puede estar a media palabra, de modo que, por ejemplo, parte de la palabra
-esté horizontal y de izquierda a derecha, parte esté vertical y de arriba hacia abajo, y otra parte horizontal
-de derecha a la izquierda.
+### ✨ The answers
 
-A continuación se muestran un par de ejemplos:
+The solutions proposed for these exercises can be found in the files described in each of the sections. This way you can also check its operation in the test files that Baufest has generated for this occasion.
 
-**Horizontal**
+### Exercise #1: Sorting
 
-X X X X X X X  
-P A L A B R A  
-X X X X X X X   
-X X X X X X X   
-X X X X X X X
+To carry out this exercise, the file **sorting.cs** in the **ingreso/sorting** folder must be modified.
 
-**Vertical**
+- Implement the method **"OrdenarPorPuntuacionYNombre"**, to sort the players in a list. Sort by score descending first, then name ascending.
 
-A X X X X X X  
-R X X X X X X   
-B X X X X X X  
-A X X X X X X   
-L X X X X X X  
-A X X X X X X  
-P X X X X X X  
+- Implement the **"OrdenarPorPuntuacionPerdidasYNombre"** method, similar to the first point but that takes into account the losses of a player. When two players have the same amount of points, the one with the least losses will be considered the highest. Then at equal points and losses, the name will continue to be used in an ascending way.
 
-**Horizontal y Vertical**
+### Exercise #2: Repeated characters
 
-X X P X X X X X    
-X X A X X X X X    
-X X L X X X X X   
-X X A B R A X X    
-X X X X X X X X   
+To carry out this exercise, the file **repeatedCharacters.cs** in the folder **ingreso/strings** s must be modified.
 
-X X X X X X X X  
-X A R B X X X X  
-X X X A X X X X   
-X X X L A P X X  
-X X X X X X X X   
+The method must return a Boolean indicating whether the "cadena" parameter meets any of the following properties:
+
+1- **All characters appear the same number of times.**
+
+> Examples: "aabbcc", "abcdef", "aaaaaa"
+
+2- **All the characters appear the same amount of times, except for 1, which appears one more time or one less time.**
+
+> Examples: "aabbccc", "aabbc", "aaaaccccc"
+
+### Exercise #3: Alphabet Soup
+
+To carry out this exercise, the **wordSearcher.cs** file in the **ingreso/alphabetSoup** folder must be modified.
+
+The objective of this exercise is to implement a function that determines if a word is in an alphabet soup, using the following rules:
+
+- Words can be arranged horizontally or vertically, not diagonally.
+- Words can be oriented in any direction, that is, from right to left or vice versa, and from top to bottom or vice versa.
+- The change of direction can be in the middle of a word, so that, for example, part of the word is horizontal and from left to right, part is vertical and from top to bottom, and another part is horizontal from right to left.
